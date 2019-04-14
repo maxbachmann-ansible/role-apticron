@@ -1,0 +1,12 @@
+---
+- name: Install apticron
+  become: true
+  apt:
+    name: apticron
+    state: present
+
+- name: add apticron conf
+  become: true
+  template:
+    src: templates/apticron.conf
+    dest: /etc/apticron/apticron.conf
