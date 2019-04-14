@@ -1,5 +1,5 @@
 # role-apticron
-role to setup apticron to inform the user about updates via email on a debian server
+role to setup apticron to inform the user about updates via email on a debian server. The role only installs apticron on debian and ubuntu, since it´s not avaible on other distributions. However the role will not throw errors on other distributions.
 
 Variables
 ---------
