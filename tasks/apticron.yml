@@ -4,9 +4,11 @@
   apt:
     name: apticron
     state: present
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 
 - name: add apticron conf
   become: true
   template:
     src: templates/apticron.conf
     dest: /etc/apticron/apticron.conf
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
